@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#120b08">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="រនាតឯក">
+  <meta name="description" content="Khmer Roneat Ek — លេងរនាតឯកលើ iPhone">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Khmer Roneat Ek</title>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark">♫</div>
+      <div>
+        <div class="eyebrow">KHMER TRADITIONAL MUSIC</div>
+        <h1>រនាតឯក</h1>
+        <p class="subtitle">KHMER RONEAT EK</p>
+      </div>
+      <button id="helpBtn" class="round-btn" aria-label="ជំនួយ">?</button>
+    </header>
+
+    <section class="controls" aria-label="ការកំណត់">
+      <div class="sound-status"><span class="pulse"></span><span id="status">ត្រៀមលេង</span></div>
+      <label class="volume">
+        <span>សំឡេង</span>
+        <input id="volume" type="range" min="0" max="1" step=".01" value=".72">
+      </label>
+      <button id="recordBtn" class="small-btn">● ថតលេង</button>
+    </section>
+
+    <section class="instrument-wrap">
+      <div class="ornament left" aria-hidden="true">❧</div>
+      <div class="rail rail-top"></div>
+      <div class="rail rail-bottom"></div>
+      <div id="keys" class="keys" aria-label="កូនរនាត"></div>
+      <div class="ornament right" aria-hidden="true">❧</div>
+    </section>
+    <div class="scroll-hint">← អូសទៅឆ្វេង ឬស្ដាំ ដើម្បីមើលកូនរនាតទាំងអស់ →</div>
+
+    <section class="now-playing">
+      <div>
+        <div class="muted">កូនរនាតចុងក្រោយ</div>
+        <div id="lastNote" class="last-note">—</div>
+      </div>
+      <div class="note-count"><strong>២៣</strong><span>កូនរនាត</span></div>
+    </section>
+
+    <section class="actions">
+      <button id="playScale" class="action primary">▶ លេងសូរេក្រម</button>
+      <button id="stopScale" class="action">■ បញ្ឈប់</button>
+      <button id="installBtn" class="action install" hidden>＋ ដំឡើង App</button>
+    </section>
+
+    <footer>
+      <p>សំឡេងសាកល្បងបង្កើតដោយឧបករណ៍សំឡេងក្នុងកម្មវិធី</p>
+      <p>Khmer Roneat Ek · Offline-ready PWA</p>
+    </footer>
+  </main>
+
+  <dialog id="helpDialog">
+    <div class="dialog-inner">
+      <button id="closeHelp" class="close">×</button>
+      <h2>របៀបប្រើប្រាស់</h2>
+      <p>ប៉ះកូនរនាតឈើនីមួយៗ ដើម្បីបញ្ចេញសំឡេង។ អូសផ្ដេកដើម្បីមើលកូនរនាតទាំង ២៣។</p>
+      <p>នៅលើ iPhone៖ បើកគេហទំព័រនេះក្នុង Safari → ចុច Share → Add to Home Screen → Add។</p>
+      <p class="tip">ចំណាំ៖ សំឡេងក្នុងកំណែដំបូងជាសំឡេងសាកល្បង មិនទាន់ជាសំឡេងថតពីរនាតពិតទេ។</p>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
